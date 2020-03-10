@@ -1,0 +1,35 @@
+.green-text {
+    color: green;
+}
+
+.bigger-text {
+    font-size: 20px;
+}
+
+h3 {
+    color: red;
+    text-decoration: underline;
+}
+
+#id124 {
+    color: blue;
+}
+
+table {
+    border: 3px dashed cyan;
+}
+
+td {
+    border: 2px solid grey;
+    padding: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+}
+
+input, select, textarea {
+    margin-bottom: 10px;
+    border: 1px solid grey;
+}
