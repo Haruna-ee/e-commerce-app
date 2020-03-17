@@ -11,7 +11,7 @@
           <CategoriesMenu/>
         </b-col>
         <b-col cols="9">
-          <MainPage/>          
+          <router-view :key="$route.fullPath"></router-view>      
         </b-col>
       </b-row>
     </b-container>
@@ -21,19 +21,12 @@
 <script>
 import Header from './components/Header.vue'
 import CategoriesMenu from './components/CategoriesMenu.vue'
-import MainPage from './components/MainPage.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     CategoriesMenu,
-    MainPage,
   }
 }
 </script>
-
-<style>
-#app {
-}
-</style>

@@ -12,7 +12,9 @@
       {{ product.description }}
     </b-card-text>
 
-    <b-button href="#" variant="primary">Go somewhere</b-button>
+    <b-button
+    :to="'/products/' + product.id"
+     variant="primary">More details</b-button>
   </b-card>
 </template>
 

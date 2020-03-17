@@ -1,6 +1,7 @@
 <template>
   <div class="product-panel">
     <h3>{{ title }}</h3>
+    {{categoryAlias}}
     <b-card-group deck>
       <ProductCard
         :product="product"
@@ -12,11 +13,13 @@
 
 <script>
 import ProductCard from './ProductCard.vue'
+import axios from "axios";
 
 export default {
   name: 'ProductPanel',
   props: {
     title: String,
+    categoryAlias: String,
   },
   components: {
     ProductCard
@@ -27,18 +30,11 @@ export default {
     };
   },
   mounted() {
-   this.products = [{
-      id: 1,
-      title: 'Card title 1',
-      image: 'https://picsum.photos/600/300/?image=1',
-      description: 'Some quick example text to build on the card.'
-   },
-   {
-      id: 2,
-      title: 'Card title 2',
-      image: 'https://picsum.photos/600/300/?image=2',
-      description: 'Some quick example text to build on the card.'
-   }];
+    axios
+      .get("https://euas.person.ee/categories/" + this.categoryAlias + "/products")
+      .then(response => {
+        this.products = response.data;
+      });
   }
 }
 </script>
