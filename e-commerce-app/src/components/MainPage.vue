@@ -1,9 +1,9 @@
 <template>
   <div class="main-page">
-    Main page from component
-    <ProductPanel title="Best offers"/>
-    <ProductPanel title="Latest arrivals"/>
-    <ProductPanel title="Sale"/>
+   
+    <ProductPanel title="Best offers" section="recommended"/>
+    <ProductPanel title="Latest arrivals" section="buynow"/>
+    <ProductPanel title="Sale" section="topselling"/>
   </div>
 </template>
 

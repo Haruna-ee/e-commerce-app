@@ -16,13 +16,18 @@ export default {
   data: function() {
     return {
       categories: []
+      
     }
   },
   mounted() {
     axios
       .get("https://euas.person.ee/categories")
       .then(response => {
+       
+        
         this.categories = response.data;
+       
+        
       });
   }
 }
